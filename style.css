@@ -1,0 +1,157 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Mulish', sans-serif;
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+     min-height: 100vh;
+     display: flex;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+}
+
+/*Showcase container*/
+ #showcase {
+     background-image: url(./images/white-laptop-1181406.jpg);
+     background-size: cover;
+     background-position: top center;
+     position: relative;
+     z-index: 1;
+ }
+
+ #showcase::after{
+    content: ''; 
+    position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     background-color: black;
+     opacity: 0.7;
+     z-index: -1 ;
+ }
+#showcase .showcase { 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+ #showcase h1 { 
+     display: block;
+     width: fit-content;
+     font-size: 4rem;
+     position: relative;
+     color: transparent;
+     animation: text_reveal .5s ease forwards;
+     animation-delay: 1s;
+ }
+#showcase h1:nth-child(1){
+    animation-delay: 1s;
+}
+#showcase h1:nth-child(2){
+    animation-delay: 1.8s;
+}
+#showcase h1:nth-child(3){
+    animation-delay: 2.8s;
+    
+    
+}
+ #showcase .cta {
+     display: inline-block;
+     padding: 10px 30px;
+     color: bisque;
+     background-color: transparent;
+     border: 2px solid cadetblue;
+     font-size: 2rem;
+     text-transform: uppercase;
+     letter-spacing: 1rem;
+     margin-top: 36px;
+     transition: 1.5s ease;
+     transition-property: background-color, color;
+ }
+ #showcase .cta:hover { 
+    color: white;
+    background-color: gray;
+    box-shadow: 0 0 10px #c0c0c7,  0 0 40px #c0c0c7, 0 0 80px #c0c0c7 }
+
+#showcase h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: cadetblue;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+
+#showcase h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+#showcase h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+#showcase h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+/*End of showcase container*/
+/*services section*/
+#services .services { 
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#services { 
+
+}
+#services .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#services .services-top p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+
+/*end of services section*/
+/*Key frame*/
+@keyframes text_reveal_box{
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal {
+    100% {
+        color:beige;
+    }
+}
+
+/*End of keyframe*/
