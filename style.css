@@ -20,6 +20,11 @@ a {
      align-items: center;
      justify-content: center;
 }
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /*Showcase container*/
  #showcase {
@@ -155,6 +160,7 @@ a {
     margin: 10px 5%;
     position: relative;
     z-index: 1;
+    color: whitesmoke;
 }
 
 #services .service-item::after{
@@ -167,10 +173,15 @@ a {
     background-color: gray;
     opacity: .8;
     z-index: -1;
-    color: whitesmoke;
+    
 }
 
-
+#services .services-bottom .icon {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#services 
 /*end of services section*/
 /*Key frame*/
 @keyframes text_reveal_box{
